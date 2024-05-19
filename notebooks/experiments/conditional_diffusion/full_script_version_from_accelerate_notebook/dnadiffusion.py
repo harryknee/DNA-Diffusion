@@ -1022,6 +1022,9 @@ class Unet_lucas(nn.Module):
 
 # Loading data and Motifs
 def motifs_from_fasta(fasta, generate_heatmap=True):
+    # LOL:HERE
+    print("Skipped Motif Analysis")
+    return 0
     print("Computing Motifs....")
     os.system(f"gimme scan {fasta} -p  JASPAR2020_vertebrates -g hg38 > train_results_motifs.bed")
     df_results_seq_guime = pd.read_csv("train_results_motifs.bed", sep="\t", skiprows=5, header=None)
